@@ -38,23 +38,28 @@
 // })
 
 const light = document.getElementById('btn-light');
-console.log(light)
+console.log(light);
 const dark = document.querySelector('#btn-dark');
-console.log(dark)
+console.log(dark);
 const green = document.querySelector('#btn-lightgreen');
-console.log(green)
+console.log(green);
+
+const mainTitle = document.getElementById('theme-title')
 
 
 light.addEventListener('click', () => {
-    document.body.style.backgroundColor = ' #fbc9c9'
+    document.body.style.backgroundColor = ' #fbc9c9';
+    mainTitle.textContent = '可愛い色ですね！🌝'
 })
 
 dark.addEventListener('click', () => {
     document.body.style.backgroundColor = ' #160138';
-    document.body.style.color = '#fff'
+    document.body.style.color = '#fff';
+    mainTitle.textContent = '見るな、早く寝ろ、おやすみなさ🌚'
 })
 
 green.addEventListener('click', () => {
     document.body.style.backgroundColor = ' #c9fbcf';
     document.body.style.color = '#515151'
+    mainTitle.textContent = '涼しいですね！🌝'
 })
