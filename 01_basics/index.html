@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
 
@@ -7,22 +8,49 @@
     <title>01_basics</title>
 </head>
 
-    <body>
-        <h1>JavaScript基礎</h1>
-        <p>開発者ツールのConsole（コンソール）を開いて結果を確認してください。</p>
-        <script>
-            //コメント
-            /*複数行
-            コメント*/
-            console.log('js!',123);
-            console.warn('注意して');
-            console.error('間違った');
-            const apples= ['apple', 'banana'];
+<body>
+    <h1>JavaScript基礎</h1>
+    <p>開発者ツールのConsole（コンソール）を開いて結果を確認してください。</p>
+    <script>
+        //コメント
+        /*複数行
+        コメント*/
+        console.log('js!', 123);
+        console.warn('注意して');
+        console.error('間違った');
+        const apples = ['apple', 'banana'];
 
-            console.table(apples);
-console.log('yang')
-            console.table(['sensei','gakusei']);
-        </script>
-    </body>
+        console.table(apples);
+        console.log('yang');
+
+        console.table(['sensei', 'gakusei']);
+
+        const name = 'youshinu';
+        console.log(name);
+        let name1;
+        name1 = 10;
+        console.log(name1);
+        name1 = 'yangxinyu';
+        console.log(name1);
+        console.log(2 + 3);
+        console.log(15 / 3);
+        console.log(5 * 5);
+        console.log(1 % 2);
+        console.log(3 ** 2);
+        let x = 1;
+        console.log(x);
+        x++;
+        console.log(x ** 2);
+        console.log(typeof x)
+
+
+        console.log('tri' + 'dent');
+        console.log(10 + 'px')
+        const person = `ddd`;
+        const pointe = 120;
+        console.log(`こんにちは、${person}です。
+        点数は${pointe}です。`)
+    </script>
+</body>
 
 </html>
