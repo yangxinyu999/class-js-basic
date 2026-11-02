@@ -55,7 +55,7 @@ passwordBtn.addEventListener('click', () => {
 
 
 const postBtn = document.getElementById('post-btn');
-postBtn.removeAttribute('disabled');
+
 
 
 
@@ -106,5 +106,37 @@ toggleImgBtn.addEventListener('click', () => {
         viewImg.setAttribute('src', DAY_IMG);
         viewImg.setAttribute('alt', '昼画像');
         toggleImgBtn.textContent = '切替夜画像';
+    }
+});
+
+let max_length = 15;
+const commentInput = document.querySelector('#comment-input');
+
+const charCount = document.querySelector('#char-count');
+
+const warning = document.getElementById('warning-text');
+
+
+
+commentInput.addEventListener('input', () => {
+    let value = commentInput.value.length;
+    max_length++;
+    charCount.textContent = `${value}`;
+    if (value === 0) {
+        postBtn.setAttribute('disabled', 'true');
+        commentInput.classList.remove('is-error');
+        warning.classList.remove('is-error');
+        warning.textContent = '';
+    } else if (value >= 15) {
+        postBtn.setAttribute('disabled', 'true');
+        warning.textContent = 'オーバー';
+        commentInput.classList.add('is-error');
+        warning.classList.add('is-error');
+
+    } else {
+        postBtn.setAttribute('disabled');
+        warning.textContent = '';
+        commentInput.classList.remove('is-error');
+        warning.classList.remove('is-error');
     }
 })
