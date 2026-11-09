@@ -50,14 +50,19 @@ button:hover {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 20px;
 }
 
 #menu-list li {
     padding: 10px 14px;
     border-bottom: 1px solid #eeeeee;
     font-size: 15px;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
 #menu-list li:hover {
-    background-color: #f9f9f9;
+    background-color: #0066cc;
+    color: #ffffff;
 }
